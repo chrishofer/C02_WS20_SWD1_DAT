@@ -24,6 +24,8 @@ class Hund: # Name in großge. CamelCase
         print("age setter aufgerufen")
         self.__alter = value
 
+
+
     @property
     def name(self):
         return self.__name
