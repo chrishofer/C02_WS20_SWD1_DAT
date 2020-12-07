@@ -5,7 +5,7 @@ class Customer:
         self.email = email
         self.addresses = []
 
-    def add_address(self, a: Address):
+    def add_address(self, a: 'Address'):
         self.addresses.append(a)
 
     def __str__(self):
