@@ -50,6 +50,7 @@ class Corgi(Hund):
     def __init__(self, name, age, iq):
         # wir müssen explizit init unserer eltern aufrufen
         super().__init__(name, age)
+        # Hund.__init__(self, name, age) # das wäre alternativ möglich
         self.iq = iq
 
     def gib_laut(self):
@@ -64,13 +65,23 @@ class Mensch:
         print("Mensch macht wuff wuff")
 
 if __name__ == '__main__':
+    #ächeddar = Corgi("cheddar", 14)
     cheddar = Corgi("Cheddar", 14, 100)
-    m = Mensch()
+    #m = Mensch()
     print(cheddar.name)
     cheddar.gib_laut()
-    l = [cheddar, m]
+
+    if type(cheddar) == Corgi:
+        print("ja ist er")
+
+    if type(cheddar) == Hund:
+        print("wird niemand am bildschirm sehen")
+
+    if isinstance(cheddar, Hund):
+        print("weil in einem corgi ein hund ist (weil elternklasse)")
+    #l = [cheddar, m]
     # duck typing
-    for laut_geber in l:
-        laut_geber.gib_laut()
+    #for laut_geber in l:
+    #    laut_geber.gib_laut()
 
 
