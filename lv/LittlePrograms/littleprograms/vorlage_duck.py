@@ -1,3 +1,5 @@
+
+
 class Duck:
     def quack(self):
         print("quack quack")

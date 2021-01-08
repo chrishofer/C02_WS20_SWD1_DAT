@@ -58,4 +58,4 @@ if __name__ == '__main__':
     print(p.get_info())
     p.eat()
     p.swim()
-    #print(PersonInDuckSimulation.mro())
+    print(PersonInDuckSimulation.mro())
