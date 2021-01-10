@@ -8,9 +8,13 @@ class Ente(abc.ABC):
         self._gewicht = gewicht
 
     @property
+    def name(self):
+        return self._name
+    
+    @property
     def gewicht(self):
         return self._gewicht
-
+    
     @abc.abstractmethod
     def get_full_weight(self) -> int:
         pass
